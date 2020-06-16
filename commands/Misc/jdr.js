@@ -4,6 +4,6 @@ module.exports.run  = (client, message, args) => {
 
 module.exports.help = {
   name: 'jdr',
-  description: 'Envoie la prochaine date de jdr',
+  description: '/shrug',
   args: false,
 };
