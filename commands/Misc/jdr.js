@@ -1,5 +1,5 @@
 module.exports.run  = (client, message, args) => {
-  message.reply('/shrug');
+  message.channel.send('/shrug');
 };
 
 module.exports.help = {
