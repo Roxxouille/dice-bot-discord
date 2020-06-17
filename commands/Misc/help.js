@@ -2,6 +2,7 @@ const { MessageEmbed } = require("discord.js");
 const { PREFIX } = require("../../config");
 const { readdirSync} = require("fs");
 const categoryList = readdirSync('./commands');
+
 module.exports.run = (client, message, args) => {
   if(!args.length){
     const embed = new MessageEmbed()
@@ -25,7 +26,7 @@ module.exports.run = (client, message, args) => {
       .setColor("#36393F")
       .setTitle(`\`${PREFIX}${command.help.name}\``)
       .addField("Description", `${command.help.description}`)
-      .addField("Utilisation", command.help.usage ? `${command.help.name} ${command.help.usage}` : `${PREFIX}${comand.help.name}`, true)
+      .addField("Utilisation", command.help.usage ? `${command.help.name} ${command.help.usage}` : `${comand.help.name}`, true)
 
       if(command.help.aliases.length > 1) embed.addField("Alias", `${command.help.aliases.join(', !')}`);
       return message.channel.send(embed);
