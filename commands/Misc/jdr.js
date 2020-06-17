@@ -4,6 +4,7 @@ module.exports.run  = (client, message, args) => {
 
 module.exports.help = {
   name: 'jdr',
+  aliases: ['date', 'datejdr'],
   description: 'Envoie la prochaine date de jdr',
   args: false,
 };

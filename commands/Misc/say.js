@@ -4,6 +4,7 @@ module.exports.run = (client, message, args) => {
 
 module.exports.help = {
   name: 'say',
+  aliases: ['repeat', 'rep'],
   description: "Répète le message d'un utilisateur",
   usage: '<votre_message>',
   args: true,

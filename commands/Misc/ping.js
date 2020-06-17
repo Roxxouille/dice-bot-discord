@@ -4,6 +4,7 @@ module.exports.run = (client, message, args) => {
 
 module.exports.help = {
   name: 'ping',
+  aliases: ['ping'],
   description: 'Renvoie pong !',
   args: false,
 };

@@ -3,7 +3,7 @@ const { TOKEN, PREFIX} = require('./config.js');
 const { readdirSync } = require('fs');
 
 const client = new Client();
-client.commands = new Collection();
+["commands", "cooldowns"].forEach(x => client[x] = new Collection());
 
 const loadCommands = (dir = "./commands/") => {
   readdirSync(dir).forEach(dirs => {
@@ -26,8 +26,9 @@ client.on('message', message => {
   const args = message.content.slice(PREFIX.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
 
-  if(!client.commands.has(commandName)) return;
-  const command = client.commands.get(commandName);
+
+  const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(commandName));
+  if (!command) return;
 
   if(command.help.args && !args.length) {
     let noArgsReply = `Il nous faut des arguments pour cette commande, ${message.author}!`;
