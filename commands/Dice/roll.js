@@ -93,7 +93,8 @@ module.exports.run = (client, message, args) => {
 module.exports.help = {
   name: 'roll',
   aliases: ['r', 'diceroll'],
-  description: 'roll a dice',
-  usage: '<nombre de dès + d + valeur du dès> exemple : !roll 1d6',
+  category: 'dice',
+  description: 'Lance un, ou des dés de la valeur souhaité',
+  usage: '<nombre de dés + d + valeur du dés> exemple : !roll 1d6',
   args: true,
 };

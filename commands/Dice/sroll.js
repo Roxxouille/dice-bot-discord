@@ -39,8 +39,9 @@ module.exports.run = (client, message, args) => {
 module.exports.help = {
   name: 'sroll',
   aliases: ['sr', 'shadowroll'],
-  description: 'shadowrun roll',
-  usage: '<nombre de dès + nombre de succès requis> exemple : !sroll 16 5',
+  category: 'dice',
+  description: 'Lance des dés avec la règle du jeu de rôles Shadowrun',
+  usage: '<nombre de dés + nombre de succès requis> exemple : !sroll 16 5',
   args: true,
 };
 
