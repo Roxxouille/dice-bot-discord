@@ -1,6 +1,6 @@
 # Dice-bot
 
-This is my first discord's bot. I wanted to make a bot that can help me and my friends playing role playing game like Shadowrun.
+This is my first discord's bot made in javascript using node.js and the discord.js library. I wanted to make a bot that can help me and my friends playing role playing game like Shadowrun.
 
 
 ## List of commands: 
